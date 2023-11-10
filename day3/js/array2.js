@@ -15,12 +15,21 @@ console.log(num.length + "개");
 //특정 요소 1개 조회
 console.log(num[0]);
 
+//수정
+num[1] = 40
+
 //전체 요소 검색
 for(let i = 0; i<num.length; i++){
   console.log(num[i] + " ");
 }
+console.log("for ~ in문 검색");
+for(let n in num){
+  console.log(num[n] + " ");
+}
+
 
 //연산
+console.log("인덱스로 연산하기");
 console.log(num[1] - num[2]);
 console.log(num[1] <= num[2]);
 
@@ -34,4 +43,5 @@ for(let i = 0; i<num.length; i++){
 console.log("합계: " + sum);
 
 avg = sum/num.length;
-console.log("평균: " + avg);
+console.log("평균: " + avg.toFixed(2));
+
