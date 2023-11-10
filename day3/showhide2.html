@@ -9,7 +9,7 @@
   </style>
 </head>
 <body>
-  <button onclick="showHide()">보이거나 숨기기</button>
+  <button onclick="showHide()" id="btn">숨기기</button>
 
   <div>
     <img src="images/flower.jpg" alt="꽃" id="pic">
@@ -21,11 +21,14 @@
       //처음 호출하면 숨기기, 두번쨰 호출하면 보이기
       //상태를 바꿔놓아야 함
       let pic = document.getElementById("pic");
+      let btn = document.getElementById("btn")
       if(sw == true){
         pic.style.display="none";
+        btn.innerText = "보이기";
         sw = false;
       }else{
         pic.style.display="block";
+        btn.innerText = "숨기기";
         sw = true;
       }
     }
