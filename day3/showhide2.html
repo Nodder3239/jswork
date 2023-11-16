@@ -6,10 +6,11 @@
   <title>이미지 보이기 및 숨기기</title>
   <style>
     button{margin:10px 2px;}
+    img#pic{display: none;}
   </style>
 </head>
 <body>
-  <button onclick="showHide()" id="btn">숨기기</button>
+  <button onclick="showHide()" id="btn">보이기</button>
 
   <div>
     <img src="images/flower.jpg" alt="꽃" id="pic">
@@ -23,12 +24,12 @@
       let pic = document.getElementById("pic");
       let btn = document.getElementById("btn")
       if(sw == true){
-        pic.style.display="none";
-        btn.innerText = "보이기";
-        sw = false;
-      }else{
         pic.style.display="block";
         btn.innerText = "숨기기";
+        sw = false;
+      }else{
+        pic.style.display="none";
+        btn.innerText = "보이기";
         sw = true;
       }
     }
