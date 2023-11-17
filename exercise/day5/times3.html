@@ -21,24 +21,26 @@
   <script>
     let x = parseInt(prompt("몇 까지 3의 배수를 찾을까요?", "0000"));
     let count = 0;
-    let txt = "";
-    // let txt = "";
+
     if(x == null){
       document.getElementById("show2").innerHTML = "입력이 취소 되었습니다.";
     }else if(isNaN(x)){
       document.getElementById("show2").innerHTML = "숫자를 입력해주세요.";
 
     }else{
+      let numbers = [];
       for(let i = 1; i<=x; i++){
         if(i % 3 === 0){
-          // document.write(i + ", ");
-          //innerHTML에는 덮어쓰는 성질이 있음, 배열이 없음
-          // document.getElementById("show").innerHTML = i + ", ";
-          txt += i + ", ";
+          numbers.push(i)   //배수를 1개씩 저장
           count++;
         }
       }
-      document.getElementById("show").innerHTML = txt;
+
+      // let numbers2 = numbers.map(function(x){
+      //   return x;
+      // })
+
+      document.getElementById("show").innerHTML = numbers;
 
       document.getElementById("show2").innerHTML = x + "까지 3의 배수의 개수 : " + count;
     }
