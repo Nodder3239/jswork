@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slide 관련 함수</title>
+  <script src="js/jquery-3.7.1.js"></script>
+  <script>
+    $(function(){
+      //slideUp() - 위로 밀고 올라감
+      $(".up").click(function(){
+        $("div").slideUp();
+      })
+      //slideDown() - 아래로 펼쳐짐
+      $(".down").click(function(){
+        $("div").slideDown();
+      })
+      $(".toggle").click(function(){
+        $("div").slideToggle();
+      })
+    })
+  </script>
+</head>
+<body>
+  <div>
+  <p>운수 좋은 날</p>
+    <img src="images/coffee-blue.jpg" alt="커피">
+  </div>
+  <button class="up">UP</button>
+  <button class="down">DOWN</button>
+  <button class="toggle">Toggle</button>
+</body>
+</html>

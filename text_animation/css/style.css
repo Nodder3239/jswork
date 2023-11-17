@@ -20,7 +20,7 @@ h1{
   animation-duration: 1s;
   animation-timing-function: ease-out;  느리게 끝남 */
 
-  animation: forward 1s ease-out
+  animation: forward 1s ease-out;
 
 }
 
