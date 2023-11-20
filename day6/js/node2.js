@@ -5,10 +5,11 @@ function addP(){
   //<li>Tea</li>
   //부모요소.appendChild(자식요소)
   let newP = document.createElement("p");
-  let newText = document.createTextNode("숨겨진 텍스트입니다.");
+  let newText = document.createAttribute("<img src='images/");
   newP.appendChild(newText);  //p태그에 내용 추가
 
   //div태그에 p태그 추가
   let div = document.getElementById("info");
   div.appendChild(newP);
 }
+
